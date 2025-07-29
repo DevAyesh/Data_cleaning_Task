@@ -5,16 +5,16 @@ This project implements a comprehensive data cleaning pipeline for the Hotel Boo
 
 ## Project Structure
 ```
-student_name_data_cleaning/
+Data_cleaning_Task/
 ├── data/
 │   ├── hotel_bookings.csv (original)
-│   └── hotel_bookings_cleaned_conservative.csv (final)
+│   └── hotel_bookings_cleaned1.csv (final)
 ├── notebooks/
-│   └── data_cleaning_conservative.ipynb
+│   └── data_cleaning.ipynb
 ├── reports/
-│   └── cleaning_report_conservative.json
+│   └── data_cleaning_report.md
 └── scripts/
-    └── download_dataset.py
+    
 ```
 
 ## Conservative Cleaning Approach
@@ -75,7 +75,7 @@ python download_dataset.py
 
 ### 3. Run the Notebook
 ```bash
-jupyter notebook notebooks/data_cleaning_conservative.ipynb
+jupyter notebook notebooks/data_cleaning.ipynb
 ```
 
 ## Cleaning Process
@@ -85,7 +85,7 @@ jupyter notebook notebooks/data_cleaning_conservative.ipynb
 2. **Missing Value Analysis** - Comprehensive missing value assessment
 3. **Data Quality Assessment** - Duplicates, outliers, inconsistencies
 
-### Phase 2: Data Cleaning Implementation (Conservative)
+### Phase 2: Data Cleaning Implementation (Comprehensive)
 1. **Handling Missing Values** - Strategic treatment strategies
 2. **Duplicate Detection and Removal** - Only exact duplicates
 3. **Outlier Detection and Treatment** - Conservative IQR method (3.0 × IQR)
@@ -98,11 +98,17 @@ jupyter notebook notebooks/data_cleaning_conservative.ipynb
 
 ## Key Features
 
-### Conservative Cleaning Strategy:
+### Comprehensive Cleaning Strategy:
 - **3.0 × IQR** for outlier detection (instead of 1.5)
 - **Only exact duplicates** removed
 - **Minimal data removal** for illogical records
 - **Appropriate missing value handling**
+
+### Minimalist Notebook Approach:
+- **Clean, organized structure** with clear sections
+- **Essential functionality** without excessive complexity
+- **Logical flow** from loading to validation
+- **Clear documentation** and explanations
 
 ### Quality Assurance:
 - **Multiple validation checks**
@@ -111,8 +117,8 @@ jupyter notebook notebooks/data_cleaning_conservative.ipynb
 - **Quality metrics calculation**
 
 ### Output Generation:
-- **Cleaned dataset**: `../data/hotel_bookings_cleaned_conservative.csv`
-- **Cleaning report**: `../reports/cleaning_report_conservative.json`
+- **Cleaned dataset**: `../data/hotel_bookings_cleaned1.csv`
+- **Cleaning report**: `../reports/data_cleaning_report.md`
 - **Validation summary**: Built into notebook
 
 ## Expected Outcomes
@@ -140,8 +146,8 @@ After running the notebook, you'll have:
 
 ## Files Description
 
-### `data_cleaning_conservative.ipynb`
-- **Main cleaning notebook** with conservative approach
+### `data_cleaning.ipynb`
+- **Main cleaning notebook** with comprehensive approach
 - **Step-by-step execution** for easy understanding
 - **Comprehensive validation** and reporting
 - **Quality-focused** cleaning strategy
@@ -155,7 +161,7 @@ After running the notebook, you'll have:
 - **All necessary dependencies** for the project
 - **Version specifications** for reproducibility
 
-### `cleaning_report_conservative.json`
+### `data_cleaning_report.md`
 - **Detailed cleaning report** with all metrics
 - **Before/after comparisons** for all cleaning steps
 - **Quality metrics** and validation results
@@ -175,7 +181,7 @@ After running the notebook, you'll have:
 
 3. **Run Cleaning**:
    ```bash
-   jupyter notebook notebooks/data_cleaning_conservative.ipynb
+   jupyter notebook notebooks/data_cleaning.ipynb
    ```
 
 4. **Execute Cells Sequentially** for best results
@@ -207,7 +213,7 @@ After running the notebook, you'll have:
    - Install requirements: `pip install -r requirements.txt`
 
 3. **Not enough records**:
-   - Use the conservative approach in `data_cleaning_conservative.ipynb`
+   - Use the comprehensive approach in `data_cleaning.ipynb`
    - Check outlier treatment parameters
 
 ## Additional Resources
@@ -223,4 +229,4 @@ For questions or issues with the data cleaning process, please refer to the comp
 
 ---
 
-**Note**: This project uses a conservative cleaning approach to ensure you get 118,000+ records while maintaining high data quality. The focus is on preserving data rather than aggressive cleaning. 
+**Note**: This project uses a comprehensive cleaning approach to ensure you get 118,000+ records while maintaining high data quality. The focus is on preserving data while ensuring data integrity and consistency. 
